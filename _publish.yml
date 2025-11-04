@@ -1,0 +1,4 @@
+- source: automatizacao_experimental_explicacoes.qmd
+  quarto-pub:
+    - id: 232eccc6-8383-4468-8a29-481f66025661
+      url: https://jenniferlopes.quarto.pub/automacao_experimental
