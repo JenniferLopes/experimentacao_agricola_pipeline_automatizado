@@ -1,0 +1,221 @@
+/* ===========================================================
+   ESTILO VISUAL – RELATÓRIOS QUARTO (.qmd)
+   Autora: Jennifer Luz Lopes
+=========================================================== */
+
+
+/* ===========================================================
+   1. CABEÇALHO DO DOCUMENTO
+   -----------------------------------------------------------
+   Define o estilo do bloco principal de título, adicionando
+   cor institucional, tipografia e o logotipo.
+=========================================================== */
+.quarto-title-block,
+.quarto-title-banner,
+.quarto-title-meta {
+  background-color: #224573 !important; /* Azul institucional */
+  color: #ffffff !important;            /* Texto branco */
+  padding: 25px 30px !important;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+  position: relative;                   /* Necessário para posicionar o logo */
+  z-index: 1;                           /* Mantém o cabeçalho atrás do botão Code */
+}
+
+/* Logotipo flutuante à direita */
+.quarto-title-block::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 90px;
+  height: 90px;
+  background-image: url("imagens/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+  pointer-events: none;  /* Evita interferência em cliques */
+  z-index: 0;            /* Fica atrás do botão Code */
+}
+
+/* Efeito de destaque ao passar o mouse */
+.quarto-title-block:hover::after {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Título principal */
+.quarto-title-block .title {
+  font-size: 1.9em;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin-bottom: 5px;
+}
+
+/* Subtítulo */
+.quarto-title-block .subtitle {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #d8e2f0 !important;
+  margin-top: 4px;
+}
+
+/* Autor */
+.quarto-title-block .author {
+  font-size: 1em;
+  font-weight: 500;
+  color: #f0f4fa !important;
+  margin-top: 8px;
+}
+
+
+/* ===========================================================
+   2. BOTÃO “CODE” (Mostrar/Ocultar códigos)
+   -----------------------------------------------------------
+   Personaliza o botão que exibe o código nos relatórios Quarto.
+=========================================================== */
+button.code-tools-button,
+.quarto-code-tools .code-tools-button,
+.code-tools-button .btn {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;  /* Mantém o botão clicável acima do cabeçalho */
+}
+
+/* Efeito hover do botão */
+button.code-tools-button:hover,
+.code-tools-button .btn:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.03);
+}
+
+
+/* ===========================================================
+   3. LINKS E TIPOGRAFIA BASE
+   -----------------------------------------------------------
+   Define o padrão visual dos textos e links do relatório.
+=========================================================== */
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #2c2c2c;
+}
+
+a {
+  color: #224573;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #16314f;
+  text-decoration: underline;
+}
+
+
+/* ===========================================================
+   4. TABELAS INTERATIVAS (DT)
+   -----------------------------------------------------------
+   Personaliza DataTables para manter a identidade visual.
+=========================================================== */
+div.dt-buttons {
+  text-align: center !important;
+  margin-top: 15px;
+}
+
+table.dataTable thead {
+  background-color: #224573;
+  color: white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #224573 !important;
+  border: 1px solid #224573 !important;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: #224573 !important;
+  color: white !important;
+}
+
+
+/* ===========================================================
+   5. BLOCOS DE CÓDIGO E RESULTADOS
+   -----------------------------------------------------------
+   Ajusta o estilo de visualização dos códigos e saídas.
+=========================================================== */
+pre code {
+  background-color: #f6f8fa;
+  border-left: 3px solid #224573;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+}
+
+
+/* ===========================================================
+   6. BARRA DE ROLAGEM PERSONALIZADA
+   -----------------------------------------------------------
+   Melhora a estética da scrollbar para navegação suave.
+=========================================================== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8edf3;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #224573;
+  border-radius: 5px;
+  border: 2px solid #e8edf3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #16314f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ===========================================================
+   7. JUSTIFICATIVA DE TEXTO
+   -----------------------------------------------------------
+=========================================================== */
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+/* ===========================================================
+   8. TÍTULOS DE NÍVEL 4 (h4)
+   -----------------------------------------------------------
+   Destaca subtítulos com barra lateral e fundo suave.
+=========================================================== */
+h4 {
+  font-weight: 700 !important;
+  font-size: 1.05em !important;
+  color: #224573 !important;
+  border-left: 4px solid #224573;
+  padding-left: 8px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  background-color: #f2f6fa;
+  border-radius: 4px;
+}

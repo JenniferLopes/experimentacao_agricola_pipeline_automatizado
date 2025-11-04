@@ -1,4 +1,12 @@
-# Objetivo: Acompanhar a execução, verificar dependências e depurar etapas do pipeline
+# =====================================================================
+# PIPELINE REPRODUTÍVEL {targets} - EXPERIMENTAÇÃO AGRÍCOLA
+# Objetivo: Acompanhar a execução, verificar dependências e 
+# depurar etapas do pipeline
+# ---------------------------------------------------------------------
+# Autora: Jennifer Luz Lopes
+# Descrição: Pipeline reprodutível para modelagem experimental
+# com coleta de dados via API GitHub e análises BLUE/BLUP
+# =====================================================================
 
 # 1. Carregar o pacote principal ----------------------------------------------
 # O {targets} gerencia pipelines reprodutíveis e automáticos no R.
