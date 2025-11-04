@@ -5,8 +5,10 @@ O pipeline executa todas as etapas desde a coleta de dados via API GitHub até a
 
 ## Relatório em HTML com as explicações de cada etapa, acesse:
 
+Relatório em HTML com as explicações de cada etapa, acesse:  
+
 [![Repositório](https://img.shields.io/badge/Repositório-Experimentacao_Agrícola_pipeline_automatizado-224573?logo=github&logoColor=white)](https://github.com/JenniferLopes/experimentacao_agricola_pipeline_automatizado)
-[![Relatório Explicações](https://img.shields.io/badge/Relatório Explicações-automacao_experimental-6B4F4F?logo=quarto&logoColor=white)](https://jenniferlopes.quarto.pub/automacao_experimental/)
+[![Relatório Explicações](https://img.shields.io/badge/Relatório_Explicações-automacao_experimental-6B4F4F?logo=quarto&logoColor=white)](https://jenniferlopes.quarto.pub/automacao_experimental/)
 
 
 ### Objetivo
